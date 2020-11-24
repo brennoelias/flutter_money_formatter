@@ -163,12 +163,12 @@ class FlutterMoneyFormatter {
 
     String alphas = compacted.replaceAll(numerics, '');
 
-    String reformat = NumberFormat.currency(
-            symbol: '',
-            decimalDigits:
-                numerics.indexOf('.') == -1 ? 0 : this.settings.fractionDigits)
-        .format(num.parse(numerics));
+    // String reformat = NumberFormat.currency(
+    //         symbol: '',
+    //         decimalDigits:
+    //             numerics.indexOf('.') == -1 ? 0 : this.settings.fractionDigits)
+    //     .format(num.parse(numerics));
 
-    return '$reformat$alphas';
+    return '$alphas';
   }
 }
